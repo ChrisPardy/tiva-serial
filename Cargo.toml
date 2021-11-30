@@ -1,0 +1,21 @@
+[package]
+name = "tiva-serial"
+version = "0.1.0"
+authors = ["Chris Pardy <chrispardy36@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+panic="abort"
+
+[profile.dev]
+panic="abort"
+debug=true
+
+[dependencies]
+embedded-hal = "0.2"
+tm4c123x-hal = "0.10"
+cortex-m-rt = "0.6"
+cortex-m-semihosting = "0.3.2"
+nb = "1.0.0"
